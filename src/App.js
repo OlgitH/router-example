@@ -1,5 +1,4 @@
 import './App.css';
-import ReactDOM from "react-dom/client";
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,31 +6,21 @@ import {
 } from "react-router-dom";
 import Home from "./components/pages/home";
 import About from "./components/pages/about";
+import Layout from "./components/layout/main";
 
 function App() {
   return (
     <div className="App">
 
-<Router>
-      <div>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/contact">Contact page</a>
-          </li>
-        </ul>
+      <Router>
+          <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="about" element={<About />} />
+              </Route>
+          </Routes>
+      </Router>
 
-        <hr />
-
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-        </Routes>
-      </div>
-    </Router>
- 
     </div>
   );
 }
