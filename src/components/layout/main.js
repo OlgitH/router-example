@@ -15,7 +15,7 @@ const Layout = () => {
                     </ul>
                 </nav>
 
-                <div className="hero-banner"></div>
+                {/* <div className="hero-banner"></div> */}
                 
                 <div className="page-content">
                     <Outlet />
