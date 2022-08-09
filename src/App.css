@@ -13,3 +13,15 @@
   background:#444;
   color:#fff;
 }
+
+/*TEAM PAGE*/
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.people-grid > div {
+  background-color: #444;
+  color:#fff;
+}
